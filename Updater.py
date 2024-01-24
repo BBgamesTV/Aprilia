@@ -16,7 +16,7 @@ RAT_Path = 'Aprilia.zip'
 
 # Checking version Telegram-RAT
 
-if RAT_Version == '1.0':
+if RAT_Version == '1.2':
 	print('No available updates.')
 	os.system('python '+'./main.py')
 else:
