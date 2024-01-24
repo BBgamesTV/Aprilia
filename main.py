@@ -4,7 +4,7 @@ import os
 import time
 import socket
 
-os.system('cmd /c "pip install --upgrade pyautogui && pip install --upgrade pillow')
+os.system('cmd /c "pip install --upgrade pyautogui && pip install --upgrade pillow && python Updater.py')
 
 hostname=socket.gethostname()
 IPAddr=socket.gethostbyname(hostname)
